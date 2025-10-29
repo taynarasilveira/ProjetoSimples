@@ -1,0 +1,30 @@
+package org.example;
+
+public class Main {
+
+        public static void main(String[] args) {
+            System.out.println("Olá SonarQube!");
+
+            int resultado = somarNumeros(5, 10);
+            System.out.println("Resultado: " + resultado);
+
+            // Código intencional para gerar code smell
+            int a = 10;
+            int b = 0;
+            if (b != 0) {
+                System.out.println(a / b);
+            }
+
+            String variavelNaoUsada = "Não estou sendo usada"; // code smell: variável não utilizada
+        }
+
+        // Método longo intencional para gerar code smell
+        public static int somarNumeros(int x, int y) {
+            int soma = 0;
+            for (int i = 0; i < 100; i++) {
+                soma += x + y;
+            }
+            return soma;
+        }
+    }
+
